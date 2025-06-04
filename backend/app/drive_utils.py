@@ -4,7 +4,7 @@ import json
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseUpload
-from .config import GOOGLE_DRIVE_FOLDER_ID, GOOGLE_DRIVE_JSON_STRING
+from .config import GOOGLE_DRIVE_FOLDER_ID, GOOGLE_DRIVE_JSON
 
 # Load service account credentials
 SCOPES = ['https://www.googleapis.com/auth/drive']
