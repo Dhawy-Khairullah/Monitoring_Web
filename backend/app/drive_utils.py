@@ -4,13 +4,13 @@ import json
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseUpload
-from .config import GOOGLE_DRIVE_JSON, GOOGLE_DRIVE_FOLDER_ID, google_drive_json_relative
+from .config import GOOGLE_DRIVE_JSON, GOOGLE_DRIVE_FOLDER_ID, GOOGLE_DRIVE_JSON_STRING
 
 # Load service account credentials
 SCOPES = ['https://www.googleapis.com/auth/drive']
 
 credentials = service_account.Credentials.from_service_account_info(
-    json.loads(google_drive_json_relative), scopes=SCOPES
+    GOOGLE_DRIVE_JSON, scopes=SCOPES
 )
 
 def upload_file_to_drive(filename: str, file_data: bytes, mimetype: str = "image/jpeg") -> str:
