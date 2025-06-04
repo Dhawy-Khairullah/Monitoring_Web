@@ -1,0 +1,14 @@
+fastapi 
+uvicorn 
+psycopg2-binary 
+sqlalchemy 
+passlib[bcrypt] 
+python-jose
+google-api-python-client 
+google-auth 
+google-auth-oauthlib
+apscheduler
+python-dotenv
+pytz
+pandas
+openpyxl

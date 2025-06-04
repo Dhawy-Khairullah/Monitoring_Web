@@ -1,0 +1,130 @@
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.search-input-modern {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  background-color: #1f2937;
+  color: #f9fafb;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-input-modern::placeholder {
+  color: #9ca3af;
+}
+
+.search-input-modern:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filter-dropdown {
+  position: relative;
+  min-width: 180px;
+}
+
+.filter-select-modern {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  background-color: #1f2937;
+  color: #f9fafb;
+  font-size: 14px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.filter-select-modern:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filter-select-modern option {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 8px 12px;
+}
+
+.filter-select-modern option:first-child {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Light theme adjustments if needed */
+@media (prefers-color-scheme: light) {
+  .search-input-modern,
+  .filter-select-modern {
+    background-color: #ffffff;
+    border-color: #d1d5db;
+    color: #111827;
+  }
+
+  .search-input-modern::placeholder {
+    color: #6b7280;
+  }
+
+  .filter-select-modern option {
+    background-color: #ffffff;
+    color: #111827;
+  }
+
+  .search-icon,
+  .dropdown-icon {
+    color: #6b7280;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .search-filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    max-width: none;
+  }
+
+  .filter-dropdown {
+    min-width: auto;
+  }
+}
